@@ -1,8 +1,8 @@
-#include <stdio.h>
-
 int len(char* s) {
   int l = 0;
-  while (*s) s++;
+  while (*s) {
+  s++;
+  l++;}
   return l;
 }
 
