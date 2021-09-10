@@ -17,7 +17,7 @@ typedef struct node_struct {
 } node_struct;
 
 // when the list is not empty, this variable will always contain
-// the element in the first position in the list (the “head” of the list)
+// the element in the first position in the list (the ¡°head¡± of the list)
 static node_struct* head;
 
 // This function will perform the insertion sort and maintain the linked list
@@ -74,5 +74,33 @@ void print_list() {
     printf("list is empty \n");
     return;
   }
+  
+  node_struct* element = head;
 
-  node_struct*
+  while (element != NULL) {
+    printf("value in list %d \n", element->value);
+    element = element->next;
+  }
+}
+
+int main() {
+  int8_t a = 20;
+  int8_t b = 5;
+  int8_t c = 10;
+  int8_t d = 21;
+  int8_t e = 41;
+  int8_t f = 2;
+
+  head = NULL;
+
+  add_element(a);
+  add_element(b);
+  add_element(c);
+  add_element(d);
+  add_element(e);
+  add_element(f);
+
+  print_list();
+
+  return 0;
+}
